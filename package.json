@@ -1,0 +1,28 @@
+{
+  "name": "oauth",
+  "version": "1.0.0",
+  "description": "test aplication with oauth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falk20/oauth-passport-test.git"
+  },
+  "keywords": [
+    "oauth",
+    "passport.js",
+    "node"
+  ],
+  "author": "Falk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Falk20/oauth-passport-test/issues"
+  },
+  "homepage": "https://github.com/Falk20/oauth-passport-test#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
