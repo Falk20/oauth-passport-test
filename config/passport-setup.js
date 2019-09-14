@@ -1,14 +1,17 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
+const secret = require('./client_secret.json');
 
 passport.use(
     new GoogleStrategy({
         //options
         callbackURL: '/auth/google/redirect',
-        clientID: '552875495410-22gde1jlqoo5t3hdf7lofjs9jqapv5bf.apps.googleusercontent.com',
-        clientSecret: 'LP_okEO6uW8vZjAwXZzn6D__'
-    }, ()=>{
+        clientID: secret.web.client_id,
+        clientSecret: secret.web.client_secret
+    }, (accessToken, refreshToken, profile, done)=>{
         //pass callback
-
+        console.log('pass callback fired');
+        console.log(profile);
+        done(profile);
     })
 );

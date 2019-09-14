@@ -7,14 +7,14 @@ router.get('/login', (req, res)=>{
 });
 
 router.get('/logout', (req, res)=>{
-    req.send('loggoning put');
+    res.send('loggoning out');
 })
 
 router.get('/google', passport.authenticate('google', {
     scope: ['profile']
 }));
 
-router.get('/google/redirect', (req, res)=> {
+router.get('/google/redirect', passport.authenticate('google'), (req, res)=> {
     res.send('you reached the callback URI');
 });
 
