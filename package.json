@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Falk20/oauth-passport-test#readme",
   "dependencies": {
+    "cookie-session": "^1.3.3",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "mongoose": "^5.7.1",
