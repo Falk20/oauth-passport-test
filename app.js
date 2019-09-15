@@ -30,7 +30,7 @@ app.use('/auth', authRoutes);
 app.get('/', (req, res) => {
     res.render('home');
 });
-
+console.log("kek");
 
 app.listen(3000, () => {
     console.log('app now listening for req on port 3000');
