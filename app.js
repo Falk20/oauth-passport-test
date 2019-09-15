@@ -1,5 +1,6 @@
 const express = require('express');
 const authRoutes = require('./routes/auth-routes');
+const profileRoutes = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const secret = require('./config/client_secret.json');
@@ -26,11 +27,11 @@ mongoose.connect(secret.mongodb.dbURI, { useNewUrlParser: true }, ()=>{
 
 
 app.use('/auth', authRoutes);
+app.use('/profile', profileRoutes);
 
 app.get('/', (req, res) => {
     res.render('home');
 });
-console.log("kek");
 
 app.listen(3000, () => {
     console.log('app now listening for req on port 3000');
